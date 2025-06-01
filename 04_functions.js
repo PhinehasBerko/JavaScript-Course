@@ -44,18 +44,14 @@ greet3("Victor")
 
 // Write a function capitalize(str) that capitalizes the first letter of a string.
 
-const exerciseOne =(number) =>{
-    if(number%2 === 0) return console.log(true)
-    else return console.log(false)
-}
+const exerciseOne =((number => number % 2 === 0) )
+// const exerciseTwo =(str) =>{
+//     return(console.log(`${str.toStringCapitalize()} is the capitalized string`))
+// }
+console.log(exerciseOne(21))
+console.log(exerciseOne(35))
+console.log(exerciseOne(42))
+console.log(exerciseOne(74))
 
-const exerciseTwo =() =>{
-    return(console.log(`${str}`))
-}
-exerciseOne(21)
-exerciseOne(35)
-exerciseOne(42)
-exerciseOne(74)
-
-exerciseTwo("daddy")
-exerciseTwo("mummy")
+// exerciseTwo("daddy")
+// exerciseTwo("mummy")

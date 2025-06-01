@@ -79,7 +79,8 @@ console.log( false && false ); // false
 console.log( !!"non-empty string" ); // true
 console.log( !!null ); // false
 
-// That is, the first NOT converts the value to boolean and returns the inverse, and the second NOT inverses it again. In the end, we have a plain value-to-boolean conversion.
+// That is, the first NOT converts the value to boolean and returns the inverse,
+//  and the second NOT inverses it again. In the end, we have a plain value-to-boolean conversion.
 
 // There’s a little more verbose way to do the same thing – a built-in Boolean function:
 
@@ -109,7 +110,8 @@ if (null || -1 && 1) console.log( 'third' );
 
 // Write the code which asks for a login with prompt.
 
-// If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
+// If the visitor enters "Admin", then prompt for a password, if the input is an empty line or 
+// Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
 
 // The password is checked as follows:
 

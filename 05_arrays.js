@@ -72,9 +72,14 @@ console.log(arrayElement.includes(3))
 
 // Search >> find
 console.log("Find...")
-console.log(arrayElement.find(3,1))
+// console.log(arrayElement.find(3,1))
 
 // 💪 Exercise:
 // Write a function that takes an array and returns a new array with only even numbers.
 
 // Bonus: Sort an array of numbers in descending order.
+let evenNumbers = (even) =>{
+   return even.filter((num => num % 2 ===0))
+}
+let even = [2,4,5,6,3,6,8, 4]
+console.log(evenNumbers(even))

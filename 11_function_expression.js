@@ -12,9 +12,10 @@ function sayHi1(){
 // For example:
 
 let sayHi = function() {
-  console.log( "Hello" );
+  console.log( "Hello sayHi" );
 };
 
+sayHi()
 // Function is a value hence it can be printed 
 console.log(sayHi)
 let func = sayHi;
@@ -33,18 +34,18 @@ console.log(`Func():> ${func2}`) // undefined
 
 // For example, this works:
 
-sayHi("John"); //return Hello, John
-
-function sayHi(name) {
-  alert( `Hello, ${name}` );
+sayHi2("Phinehas"); //return Hello, Phinehas
+function sayHi2(name) {
+  console.log( `Hello, ${name}` );
 }
+console.log("below is sayHi2")
 
 // for function expression it will return error becos u can call a function expression
 // before it declarations as seen below
 // Function Expressions are created when the execution reaches them 
-sayHi("John"); // error!
+// sayHi("John"); // error!
 
-let sayHi = function(name) {  // (*) no magic any more
+let sayHi3 = function(name) {  // (*) no magic any more
   alert( `Hello, ${name}` );
 };
 
