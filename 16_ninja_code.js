@@ -19,3 +19,5 @@
 // The great image has no form 
 
 // I have to revisit this tutorial
+value = 0; // A single variable to hold a value
+console.log(value === null)
