@@ -44,7 +44,7 @@ let message;
 // Characteristics of Primitive Types
 // 1. Immutable ( can't be changed)
 // 2. stored by value.
-// 3. Directly constain the data
+// 3. Directly contain the data
 
 // Reference Types
 //  Object, Array, Functions, Any user-defined objects.
