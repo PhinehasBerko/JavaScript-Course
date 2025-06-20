@@ -106,3 +106,4 @@ JavaScript provides constructor functions for many built-in language
 objects: like Date for dates, Set for sets and others that we plan to study.
 
 */
+// The object will be continued later in the next file
