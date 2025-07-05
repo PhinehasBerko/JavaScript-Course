@@ -76,3 +76,52 @@ function userRegistration (userData) {
 // NB: Even in small JavaScript projects, SRP leads to better code discipline and long-term maintainablility.
 // Always ask: `Does this function do more than one thing?` If yes - split it.
 
+// Open / Closed Principle (OCP)
+// The Open / Closed Principle states: Software entities should be open for extension but closed for modification.
+// In simple terms, you should be able to add new functionality without changing existing code.
+// This approach  reduces the risk of introducing bugs and promotes code reuse and flexibility.
+
+class DiscountStrategy {
+    getDiscount(price) {
+        return price
+    }
+}
+
+class RegularCustomerDiscount extends DiscountStrategy {
+    getDiscount(price) {
+        return price * 0.9;
+    }
+}
+
+class VIPCustomerDiscount extends DiscountStrategy {
+    getDiscount(price){
+        return price * 0.8;
+    }
+}
+
+class PlatinumCustomerDiscount extends DiscountStrategy {
+    getDiscount(price) {
+        return price * 0.7;
+    }
+}
+
+// Use case
+function getDiscountPrice(DiscountStrategy, price) {
+    return DiscountStrategy.getDiscount(price);
+}
+
+const customer = new VIPCustomerDiscount();
+console.log(getDiscountPrice(customer, 100));
+
+// Why It's Better: 
+// 1. You can add new discount strategies by creating a new class that extends DiscountStrategy, without
+// modifying any existing code.
+// 2. This adheres to OCP: the getDiscountedPrice function is closed for modification, yet open for extension
+// through polymorphism.
+// 3. Logic is cleanly separated and easier to test or extend.
+
+// 🚀 Real-World Application of OCP in JavaScript
+// 1. Middleware systems (eg: Express.js): You can extend functionality by adding middleware without modifying the 
+// core logic.
+// 2. Plugin architectures: Systems like Webpack and ESLint are extensible without changing their internals.
+// 3. Form validation libraries: Easily support new rules by registering them, not rewriting the validator.
